@@ -13,4 +13,14 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Project-3')
 
+"""
+Input your first and last name.
+"""
+first_name = input("Please enter your first name:")
+last_name = input("Please enter your last name:")
+
+print("Hello", first_name,last_name, "Welcome to Warrens Kitchens' Database:")
+
+
+
 

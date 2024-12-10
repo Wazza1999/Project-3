@@ -1,32 +1,140 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Corri Construction Company - Contractor Page
 
-Welcome,
+![ header]()
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
+The deployed project live link is [HERE]() - **_Use Ctrl (Cmd) and click to open in a new window._**
 
-## Reminders
+## Contents
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+- [Introduction](#introduction)
+- [Project](#project)
+  - [User goals:](#user-goals)
+  - [Site owner goals](#site-owner-goals)
+- [Pre development](#pre-development)
+- [Development](#development)
+- [Features](#features)
+  - [Slow Typing Instructions](#slow-typing-instructions)
+  - [Name and profession input](#name-and-profession-input)
+  - [Hourly pay and employee number](#hourly-pay-and-employee-number)
+  - [Working dates, days and hours](#working-dates-days-and-hours)
+  - [Confirm information so far](#confirm-information-so-far)
+  - [Tax and National Insurance](#tax-and-national-insurance)
+  - [Confirmation of information](#confirmation-of-information)
+  - [What the portal checks](#what-the-portal-checks)
+  - [Error Page](#error-page)
+- [Google Sheets](#google-sheets)
+  - [Payments](#payments)
+  - [Tax](#tax)
+- [Technologies Used](#technologies-used)
+- [Resources](#resources)
+  - [Libraries](#libraries)
+- [Testing](#testing)
+- [Future Updates](#future-updates)
+- [Validation](#validation)
+- [Deployment](#deployment)
+  - [Heroku](#heroku)
+  - [Branching the GitHub Repository using GitHub Desktop and Visual Studio Code](#branching-the-github-repository-using-github-desktop-and-visual-studio-code)
+- [Bugs](#bugs)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
 
-## Creating the Heroku app
+## Introduction
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Project
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+The aim of this project is to:
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+-
 
-Connect your GitHub repository and deploy as normal.
+![storyboard]()
 
-## Constraints
+### User goals:
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+### Site owner goals
 
----
+### Pre development
 
-Happy coding!
+![ccccp flow chart]()
+
+My actual notes that created the flow chart
+
+![CCCCP notes]()
+
+![CCCCP notes]()
+
+### Development
+
+## Features
+
+
+### Name and profession input
+
+
+### Working days in a week
+
+
+### Confirm information so far
+
+
+### Confirmation of information
+
+
+### What the portal checks
+
+
+### Error Page
+
+## Google Sheets
+
+
+## Technologies Used
+
+The main technology used to create this program is Python
+HTML and CSS to change the background and add social media links.
+Google API
+Google Sheets
+
+### Resources
+
+
+### Libraries
+
+
+## Testing
+
+The portal has been well tested and the results can be viewed [here - TESTING]()
+
+## Future Updates
+
+
+## Validation
+
+
+## Deployment
+
+### Heroku
+
+The Application has been deployed from GitHub to Heroku by following the steps:
+
+1. Create or log in to your account at heroku.com
+2. Create a new app, add a unique app name ( for example ) and then choose your region
+3. Click on create app
+4. Go to "Settings"
+5. Under Config Vars add the private API key information using key 'CRED' and into the value area copy the API key information added to the .json file. Also add a key 'PORT' and value '8000'.
+6. Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
+7. Go to "Deploy" and select "GitHub" in "Deployment method"
+8. To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below.
+9. Choose the branch you want to build your app from
+10. If preferred, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
+11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
+
+The deployed project live link is [HERE]() - **_Use Ctrl (Cmd) and click to open in a new window._**
+
+## Bugs
+
+## Credits
+
+
+## Acknowledgements

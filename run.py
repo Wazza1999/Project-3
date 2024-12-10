@@ -13,8 +13,4 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Project-3')
 
-previous = SHEET.worksheet('previous')
 
-data = previous.get_all_values()
-
-print(data)

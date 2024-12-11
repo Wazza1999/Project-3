@@ -31,7 +31,13 @@ while True:
 Input position of company
 """
 print("Please select your current position in the company from the following roles:")
-positions = ["Head Chef", "Sous Chef", "Chef de Partie", "Commis Chef", "Kitchen Porter"]
+positions = {
+  "Head Chef": {"Head Chef"}, 
+  "Sous Chef": {"Sous Chef"},
+  "Chef de Partie": {"Chef de Partie"},
+  "Commis Chef": {"Commis Chef"},
+ "Kitchen Porter": {"Kitchen Porter",}
+}
 yes = ["Y"]
 while True:
     position = input("Enter Role Here:")
@@ -50,9 +56,7 @@ yes = ["Y"]
 while True:
     yes = input("Would you like to see the hours you worked last week? Y/N:")
     if yes == "Y":
-        print("Here are you total hours from last week:")
+        print("Here are you total hours from last week:", position)
         previous = SHEET.worksheet("previous").get_all_values()
-        pprint(previous)
-
 
 

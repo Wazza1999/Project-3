@@ -18,14 +18,14 @@ SHEET = GSPREAD_CLIENT.open('Project-3')
 """
 Input your first and last name.
 """
-def input_name_data():
+def get_name_data():
 
     while True:
         first_name = input("Please enter your first name:")
         last_name = input("Please enter your last name:")
         if first_name.isalpha():
-            print("\nHello", first_name,last_name, "Welcome to Warrens Kitchens' Database:\n")
-            return 
+            print("\nHello", first_name + last_name, "Welcome to Warrens Kitchens' Database:\n")
+            return
     else:
         print("Please do not input invalid characters such as numbers.")
 
@@ -38,6 +38,7 @@ def get_position_data():
     positions = ["Head Chef", "Sous Chef", "Chef de Partie", "Commis Chef", "Kitchen Porter"]
     print('\n'.join(positions))
     yes = ["Y"]
+    no = ["N"]
     while True:
         position = input("\nEnter Role Here:")
         if position in positions:
@@ -67,6 +68,7 @@ def get_previous_data(position):
             total_hours = last_row[position_col]  
 
             print("\nTotal hours for position:", total_hours)
+            return position
         elif "N":
             print("\nContinuing....\n")
             break
@@ -89,7 +91,7 @@ def get_user_data():
         current_data = data_str.split(",")
 
         if validate_data(current_data):
-            print("Data is Valid")
+            print("\nData is Valid...\n")
             break
 
 """
@@ -111,15 +113,25 @@ def validate_data(values):
     
     return True
     
+"""
+Updates the worksheet with the users inputted data
+"""
+def update_current_worksheet():
+    print("Updating the worksheet with your hours worked.\n")
+    print("Thank you for inputting the data.\n")
+    current_worksheet = SHEET.worksheet("current")
+    current_worksheet.append_row()
+
     """
     Runs all program functions
     """
 def main():
-    name = input_name_data()
+    name = get_name_data()
     position = get_position_data()
     previous = get_previous_data(position)
     user = get_user_data()
-    
+    value = validate_data()
+    update_current_worksheet()
 print("Welcome to Warrens Kitchens' Database")
 main()  
 

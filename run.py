@@ -34,6 +34,7 @@ Input position of company
 print("Please select your current position in the company from the following roles:\n")
 positions = ["Head Chef", "Sous Chef", "Chef de Partie", "Commis Chef", "Kitchen Porter"]
 print('\n'.join(positions))
+yes = ["Y"]
 while True:
     position = input("\nEnter Role Here:")
     if position in positions:
@@ -42,7 +43,7 @@ while True:
     if yes == "Y":
         break
     else:
-        print("Please select correct role.")
+        print("Incorrect data inputted, please select correct role.")
 
 """
 Show previous the hours worked in the previous week.
@@ -52,7 +53,7 @@ no = ["N"]
 while True:
     yes = input("Would you like to see the hours you worked last week? Y/N:")
     if yes == "Y":
-        print("Here are you total hours from last week:", position)
+        print("\nHere are you total hours from last week:", position)
         previous = SHEET.worksheet("previous").get_all_values()
 
         positions = previous[0]  
@@ -61,8 +62,30 @@ while True:
         last_row = previous[-1]  
         total_hours = last_row[position_col]  
 
-        print("Total hours for position:\n ", total_hours)
+        print("\nTotal hours for position:", total_hours)
         break
+    elif "N":
+        print("Continuing....")
+        break
+    else:
+        print("\nInvalid input, please only use Y/N")
+        print("\nReturning to question.")
+
+        
+
+        
+        
+                
+
+
+                
+
+                
+
+
+
+    
+        
     
   
 

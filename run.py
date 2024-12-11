@@ -23,20 +23,22 @@ while True:
         print("Hello", first_name,last_name, "Welcome to Warrens Kitchens' Database:\n")
         break
     else:
-        print("Please do not input invalid characters such as numbers")
+        print("Please do not input invalid characters such as numbers.")
 
 
 """
 Input position of company
 """
 print("Please select your current position in the company from the following roles:")
+positions = ["Head Chef", "Sous Chef", "Chef de Partie", "Commis Chef", "Kitchen Porter"]
 
-position = ["Head Chef", "Sous Chef", "Chef de Partie", "Commis Chef", "Kitchen Porter"]
-for x in position:
-    print(x)
-
-position = input("Enter Role Here:")
-print("Thank you for selecting", position, first_name)
+while True:
+    position = input("Enter Role Here:")
+    if position in positions:
+        print("Thank you for selecting", position, first_name)
+        break
+    else:
+        print("Please do not input invalid characters such as numbers.")
 
 
 

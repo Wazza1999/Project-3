@@ -76,24 +76,41 @@ def get_previous_data(position):
     
 """
 Allow user to input their data for the current week and have it totalled
+Used Love sandwiches walkthrough for this bit of code as I couldn't figure it out
 """
 def get_user_data():
-
-    print("Please enter days you have worked" )
-    print("Only add data up to 7 days.")
-    print("Example: 1,2,3,4,5,6,7\n")
-    number_str = input("Enter data here:")
-    current_data = data_str.split(",")
-
-    if validate_data(sales_data):
-        while True:
-            try:
-                number = int(number_str)
-                print(f"You entered {number}")
-            except ValueError:
-                print("This is not a number or there are too many numbers. Please enter data up to 7 days.")
+    while True:
+        print("Please enter days you have worked" )
+        print("Only add data up to 7 days.")
+        print("Example: 1,2,3,4,5,6,7\n")
         
+        data_str = input("Enter data here:")
+        
+        current_data = data_str.split(",")
 
+        if validate_data(current_data):
+            print("Data is Valid")
+            break
+
+"""
+Converts all string values into integers. 
+Raises ValueError if strings cannot be converted into int,
+or if there aren't exactly 7 values.
+Used Love sandwiches walkthrough for this bit of code as I couldn't figure it out 
+"""
+def validate_data(values):
+    try:
+        [int(value) for value in values]
+        if len(values) !=7:
+            raise ValueError(
+                f"Exactly 7 values required, you provided {len(values)}"
+            )
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+        return False
+    
+    return True
+    
     """
     Runs all program functions
     """

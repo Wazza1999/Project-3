@@ -2,26 +2,22 @@
 
 Once the portal was operational I set about testing it for errors and to ensure any possible errors that can be made were caught.
 
-The deployed project live link is [HERE](https://project-3-heroku-8742cd432e6c.herokuapp.com/) - ***Use Ctrl (Cmd) and click to open in a new window.*** 
+The deployed project live link is [HERE](https://project-3-heroku-8742cd432e6c.herokuapp.com/) - **_Use Ctrl (Cmd) and click to open in a new window._**
 
 The following tests were carried out to ensure the portal is working correctly
 
-| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Name input | User is asked to enter their name | First & Last name input| Works as expected | 
-| Name input | User inputs symbol or number | Error message appears | Works as expected | 
-| Profession | User selects their profession | User selects a - f | Works as expected | 
-| Profession | User selects invalid letter | Error message appears | Works as expected | 
-| Information | User given contractor No & pay | Information confirmed as true | Works as expected |
-| Information | Information entered incorrect | Notice appears to start again | Works as expected |
-| Dates & hours | User adds dates, days and hours | Correct information confirmed | Works as expected |
-| Dates & hours | Incorrect information added | Error message appears | Works as expected |
-| "n" option  | User selects no to confirmation | Notice appears to start again | Works as expected |
-| Confirmed Info | Everything entered presented | Pay amount minus tax & NI appears | Works as expected |
-| Submit info | Everything entered ready to submit | Users clicks y to submit | Works as expected |
-| Submit info | Ready to submit, n selected | Notice appears to start again | Works as expected |
+| **Feature** | **Action**                                                    | **Expected Result**                  | **Actual Result**                                             |
+| ----------- | ------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------- |
+| Name input  | User is asked to enter their name                             | First & Last name input              | Works as expected                                             |
+| Name input  | User inputs symbol or number                                  | Error message appears                | Works as expected                                             |
+| Profession  | User selects their profession                                 | User types their profession in       | Works as expected                                             |
+| Profession  | User selects invalid letter                                   | Error message appears                | Works as expected                                             |
+| Information | User asked if they would like to look at their previous hours | if yes they see their previous hours | Works as expected                                             |
+| Information | User asked if they would like to look at their previous hours | if no they continue to next part     | Works as expected                                             |
+| Dates       | User adds days of the current week into the worksheet         | Correct information confirmed        | The program accepts the data but doesn't change the worksheet |
 
 ## Testing Browsers
+
 The portal was tested in the following browsers (based on my own testing and those of people who tested the portal):
 
 - Chrome
@@ -34,25 +30,41 @@ It worked without issues in the above browsers.
 
 ## Testing Google Sheets
 
-Once the Google sheets was attached and working I tested the system several times by including ficticious workers that were added as data to the Google sheets file.
+Once the Google sheets was attached and working I tested the system several times by inputting all the different jobs and receiving the correct total back in the terminal
 
-When first added the data numerical value added extra numbers e.g. £897.4953 - to ensure the number was rounded to only two digits at the end the str(round) object was used. The idea to use str(round) decided after a session with Tutor support.
+However although the program accepts data for the 'current' worksheet it doesn't seem to change the actual table no matter what I enter. This is a bug I've yet to fix
 
-![round](assets/images/strround-testing.png)
+![round](assets/images/worksheet1.JPG)
+![round](assets/images/worksheet2.JPG)
 
-Even though Google Sheets was added after the program was developed there were no other issues and it worked perfectly and integrated easily.
+# Certain Bugs
 
-## CSS and HTML Validation
+Some bugs I came across throughout development that were eventually fixed.
 
-A small amount of CSS and HTML was used when creating the 404 error page. Both pages were run through the appropriate W3C validator and no errors were found.
+## Bug1
+
+This bug was due to a break in the position function and was causing python trouble so I deleted it and changed it into a return which fixed the issue.
+
+![Bug1](assets/images/testing1.JPG)
+
+## Bug2
+
+This Bug was causing the name input to accept characters other than letters which is what I was trying to avoid however ended up fixing evetually having the names repeat until the corrcet characters are used.
+
+![Bug2](assets/images/testing2.JPG)
+
+## Bug3
+
+This bug was the result of me typing append.col instead of append.row which caused the program to break and I eventually fixed by changing that line of code.
+
+![Bug3](assets/images/testing3.JPG)
 
 ## Future Updates
 
 As a result of testing requests for future functionality include:
 
-The ability to edit information already added if it is incorrect without having to start again.
+The ability to add multiple weeks to the worksheet
 
-Contractor can selection options for other payments that need to be removed from their pay e.g. student loan or pension to make their final pay amount more accurate.
+User can have hours emailed to them so they can keep up to date with their rota
 
-
-### [BACK TO README](https://github.com/todiane/corri-construction-p3/blob/main/README.md)
+### [BACK TO README](https://github.com/Wazza1999/Project-3/blob/main/README.md)

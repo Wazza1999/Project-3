@@ -20,7 +20,7 @@ while True:
     first_name = input("Please enter your first name:")
     last_name = input("Please enter your last name:")
     if first_name.isalpha():
-        print("Hello", first_name,last_name, "Welcome to Warrens Kitchens' Database:\n")
+        print("\nHello", first_name,last_name, "Welcome to Warrens Kitchens' Database:\n")
         break
     else:
         print("Please do not input invalid characters such as numbers.")
@@ -42,6 +42,12 @@ while True:
         break
     else:
         print("Please select correct role.")
+
+"""
+Show previous the hours worked in the previous week.
+"""
+
+
 
 
 

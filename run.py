@@ -24,7 +24,7 @@ def get_name_data():
         first_name = input("Please enter your first name:")
         last_name = input("Please enter your last name:")
         if first_name.isalpha():
-            print("\nHello", first_name + last_name, "Welcome to Warrens Kitchens' Database:\n")
+            print("\nHello", first_name, last_name, "Welcome to Warrens Kitchens' Database:\n")
             return
     else:
         print("Please do not input invalid characters such as numbers.")
@@ -116,11 +116,13 @@ def validate_data(values):
 """
 Updates the worksheet with the users inputted data
 """
-def update_current_worksheet():
+def update_current_worksheet(name):
     print("Updating the worksheet with your hours worked.\n")
     print("Thank you for inputting the data.\n")
     current_worksheet = SHEET.worksheet("current")
-    current_worksheet.append_row()
+    current_worksheet.append_row(name)
+
+    print("Closing program...")
 
     """
     Runs all program functions
@@ -130,8 +132,7 @@ def main():
     position = get_position_data()
     previous = get_previous_data(position)
     user = get_user_data()
-    value = validate_data()
-    update_current_worksheet()
+    update_current_worksheet(name)
 print("Welcome to Warrens Kitchens' Database")
 main()  
 

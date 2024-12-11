@@ -13,18 +13,13 @@ The deployed project live link is [HERE]() - **_Use Ctrl (Cmd) and click to open
 - [Pre development](#pre-development)
 - [Development](#development)
 - [Features](#features)
-  - [Slow Typing Instructions](#slow-typing-instructions)
   - [Name and profession input](#name-and-profession-input)
-  - [Hourly pay and employee number](#hourly-pay-and-employee-number)
-  - [Working dates, days and hours](#working-dates-days-and-hours)
+  - [Working days in a week](#working-days-in-a-week)
   - [Confirm information so far](#confirm-information-so-far)
-  - [Tax and National Insurance](#tax-and-national-insurance)
   - [Confirmation of information](#confirmation-of-information)
   - [What the portal checks](#what-the-portal-checks)
   - [Error Page](#error-page)
 - [Google Sheets](#google-sheets)
-  - [Payments](#payments)
-  - [Tax](#tax)
 - [Technologies Used](#technologies-used)
 - [Resources](#resources)
   - [Libraries](#libraries)
@@ -32,8 +27,7 @@ The deployed project live link is [HERE]() - **_Use Ctrl (Cmd) and click to open
 - [Future Updates](#future-updates)
 - [Validation](#validation)
 - [Deployment](#deployment)
-  - [Heroku](#heroku)
-  - [Branching the GitHub Repository using GitHub Desktop and Visual Studio Code](#branching-the-github-repository-using-github-desktop-and-visual-studio-code)
+- [Heroku](#heroku)
 - [Bugs](#bugs)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
@@ -68,26 +62,17 @@ My actual notes that created the flow chart
 
 ## Features
 
-
 ### Name and profession input
-
 
 ### Working days in a week
 
-
 ### Confirm information so far
 
-
 ### Confirmation of information
-
-
-### What the portal checks
-
 
 ### Error Page
 
 ## Google Sheets
-
 
 ## Technologies Used
 
@@ -98,8 +83,8 @@ Google Sheets
 
 ### Resources
 
-
 ### Libraries
+
 Pandas as it was the only way I could locate specific cells in my excel sheet.
 
 ## Testing
@@ -108,9 +93,7 @@ The portal has been well tested and the results can be viewed [here - TESTING]()
 
 ## Future Updates
 
-
 ## Validation
-
 
 ## Deployment
 
@@ -135,6 +118,5 @@ The deployed project live link is [HERE]() - **_Use Ctrl (Cmd) and click to open
 ## Bugs
 
 ## Credits
-
 
 ## Acknowledgements

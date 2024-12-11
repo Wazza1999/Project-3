@@ -24,7 +24,15 @@ print("Hello", first_name,last_name, "Welcome to Warrens Kitchens' Database:\n")
 """
 Input position of company
 """
-print("Please select your current employed role in the company:")
+print("Please select your current position in the company from the following roles:")
+
+position = ["Head Chef", "Sous Chef", "Chef de Partie", "Commis Chef", "Kitchen Porter"]
+for x in position:
+    print(x)
+
+position = input("Enter Role Here:")
+print("Thank you for selecting", position)
+
 
 
 

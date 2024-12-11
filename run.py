@@ -115,11 +115,11 @@ def validate_data(values):
 """
 Updates the worksheet with the users inputted data
 """
-def update_current_worksheet():
+def update_current_worksheet(name):
     print("Updating the worksheet with your hours worked.\n")
     print("Thank you for inputting the data.\n")
     current_worksheet = SHEET.worksheet("current")
-    current_worksheet.append_row()
+    current_worksheet.append_row(name)
 
     """
     Runs all program functions
@@ -129,8 +129,7 @@ def main():
     position = get_position_data()
     previous = get_previous_data(position)
     user = get_user_data()
-    value = validate_data()
-    update_current_worksheet()
+    update_current_worksheet(name)
 print("Welcome to Warrens Kitchens' Database")
 main()  
 

@@ -31,10 +31,11 @@ while True:
 """
 Input position of company
 """
-print("Please select your current position in the company from the following roles:")
+print("Please select your current position in the company from the following roles:\n")
 positions = ["Head Chef", "Sous Chef", "Chef de Partie", "Commis Chef", "Kitchen Porter"]
+print('\n'.join(positions))
 while True:
-    position = input("Enter Role Here:")
+    position = input("\nEnter Role Here:")
     if position in positions:
         print("You selected:", position, first_name,)
         yes = input("Is that correct Y/N:")

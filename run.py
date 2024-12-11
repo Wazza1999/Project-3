@@ -1,6 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
-
+from pprint import pprint
 
 
 SCOPE = [
@@ -85,7 +85,7 @@ def get_user_data():
         print("Only add data up to 7 days.")
         print("Example: 1,2,3,4,5,6,7\n")
         
-        data_str = input("Enter data here:\n")
+        data_str = input("Enter data here:")
         
         current_data = data_str.split(",")
 
@@ -115,13 +115,11 @@ def validate_data(values):
 """
 Updates the worksheet with the users inputted data
 """
-def update_current_worksheet(name):
+def update_current_worksheet():
     print("Updating the worksheet with your hours worked.\n")
     print("Thank you for inputting the data.\n")
     current_worksheet = SHEET.worksheet("current")
-    current_worksheet.append_row(name)
-
-    print("Closing program...")
+    current_worksheet.append_row()
 
     """
     Runs all program functions
@@ -131,6 +129,8 @@ def main():
     position = get_position_data()
     previous = get_previous_data(position)
     user = get_user_data()
-    update_current_worksheet(name)
+    value = validate_data()
+    update_current_worksheet()
 print("Welcome to Warrens Kitchens' Database")
 main()  
+

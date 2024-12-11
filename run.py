@@ -61,7 +61,7 @@ def get_previous_data(position):
             previous = SHEET.worksheet("previous").get_all_values()
             
             positions = previous[0]  
-            position_col = position.index(position)  
+            position_col = positions.index(position)  
 
             last_row = previous[-1]  
             total_hours = last_row[position_col]  

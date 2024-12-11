@@ -31,14 +31,17 @@ Input position of company
 """
 print("Please select your current position in the company from the following roles:")
 positions = ["Head Chef", "Sous Chef", "Chef de Partie", "Commis Chef", "Kitchen Porter"]
-
+yes = ["Y"]
+no = ["N"]
 while True:
     position = input("Enter Role Here:")
     if position in positions:
-        print("Thank you for selecting", position, first_name)
+        print("You selected:", position, first_name,)
+        yes = input("Is that correct Y/N:")
+    if yes == "Y":
         break
     else:
-        print("Please do not input invalid characters such as numbers.")
+        print("Please select correct role.")
 
 
 

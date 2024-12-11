@@ -18,12 +18,11 @@ SHEET = GSPREAD_CLIENT.open('Project-3')
 Input your first and last name.
 """
 def get_name_data():
-
     while True:
         first_name = input("Please enter your first name:")
         last_name = input("Please enter your last name:")
         if first_name.isalpha():
-            print("\nHello", first_name, last_name, "Welcome to Warrens Kitchens' Database:\n")
+            print("\nHello", first_name, last_name, "Welcome\n")
             return
     else:
         print("Please do not input invalid characters such as numbers.")

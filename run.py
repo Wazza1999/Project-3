@@ -16,10 +16,15 @@ SHEET = GSPREAD_CLIENT.open('Project-3')
 """
 Input your first and last name.
 """
-first_name = input("Please enter your first name:")
-last_name = input("Please enter your last name:")
+while True:
+    first_name = input("Please enter your first name:")
+    last_name = input("Please enter your last name:")
+    if first_name.isalpha():
+        print("Hello", first_name,last_name, "Welcome to Warrens Kitchens' Database:\n")
+        break
+    else:
+        print("Please do not input invalid characters such as numbers")
 
-print("Hello", first_name,last_name, "Welcome to Warrens Kitchens' Database:\n")
 
 """
 Input position of company
@@ -31,7 +36,8 @@ for x in position:
     print(x)
 
 position = input("Enter Role Here:")
-print("Thank you for selecting", position)
+print("Thank you for selecting", position, first_name)
+
 
 
 

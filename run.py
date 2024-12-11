@@ -1,6 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
-import pandas as pd
+
 
 
 SCOPE = [
@@ -85,7 +85,7 @@ def get_user_data():
         print("Only add data up to 7 days.")
         print("Example: 1,2,3,4,5,6,7\n")
         
-        data_str = input("Enter data here:")
+        data_str = input("Enter data here:\n")
         
         current_data = data_str.split(",")
 

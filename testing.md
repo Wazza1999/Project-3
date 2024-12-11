@@ -16,6 +16,13 @@ The following tests were carried out to ensure the portal is working correctly
 | Information | User asked if they would like to look at their previous hours | if no they continue to next part     | Works as expected                                             |
 | Dates       | User adds days of the current week into the worksheet         | Correct information confirmed        | The program accepts the data but doesn't change the worksheet |
 
+
+## HTML and CSS Testing
+I passed the simple 404 page through both validators and they came back with no errors
+
+
+
+
 ## Testing Browsers
 
 The portal was tested in the following browsers (based on my own testing and those of people who tested the portal):

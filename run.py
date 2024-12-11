@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+from pprint import pprint
 
 
 SCOPE = [
@@ -32,7 +33,6 @@ Input position of company
 print("Please select your current position in the company from the following roles:")
 positions = ["Head Chef", "Sous Chef", "Chef de Partie", "Commis Chef", "Kitchen Porter"]
 yes = ["Y"]
-no = ["N"]
 while True:
     position = input("Enter Role Here:")
     if position in positions:
@@ -46,10 +46,13 @@ while True:
 """
 Show previous the hours worked in the previous week.
 """
-
-
-
-
+yes = ["Y"]
+while True:
+    yes = input("Would you like to see the hours you worked last week? Y/N:")
+    if yes == "Y":
+        print("Here are you total hours from last week:")
+        previous = SHEET.worksheet("previous").get_all_values()
+        pprint(previous)
 
 
 
